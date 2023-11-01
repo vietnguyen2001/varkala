@@ -137,7 +137,7 @@
                                 <div class="content-icon">
                                     <div class="icon-shop">
                                         <a href="">
-                                            <img src="https://pixsector.com/cache/8649d195/av669d9c3d9a7287d4500.png" alt="">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/750/750453.png" alt="">
                                             <h5>Trousers</h5>
                                         </a>
                                     </div>
@@ -214,7 +214,43 @@
                             </div>
                         </ul>
                     </li>
-                    <li class="dropdown5"><a href="javacrip:void()" onclick="toggleDropdown5()">Pages <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                    <li class="dropdown5">
+                        <a href="javacrip:void()" onclick="toggleDropdown5()">Pages <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <ul class="submenu5">
+                            <div class="submenu5_1">
+                                <div class="content1">
+                                    <li><a href="">Shop Cards</a></li>
+                                    <li><a href="">Default</a></li>
+                                    <li><a href="">Product Card 1</a></li>
+                                    <li><a href="">Product Card 2</a></li>
+                                    <li><a href="">Product Card 3</a></li>
+
+                                </div>
+                                <div class="content2">
+                                    <li>.</li>
+                                    <li><a href="">Product Card 4</a></li>
+                                    <li><a href="">Product Card 5</a></li>
+                                    <li><a href="">Product Card 6</a></li>
+                                    <li><a href="">Product Card 7</a></li>
+                                </div>
+                                <div class="content1">
+                                    <li><a href="">Shop Cards</a></li>
+                                    <li><a href="">Default</a></li>
+                                    <li><a href="">Product Card 1</a></li>
+                                    <li><a href="">Product Card 2</a></li>
+                                    <li><a href="">Product Card 3</a></li>
+
+                                </div>
+                                <div class="content2">
+                                    <li>.</li>
+                                    <li><a href="">Product Card 4</a></li>
+                                    <li><a href="">Product Card 5</a></li>
+                                    <li><a href="">Product Card 6</a></li>
+                                    <li><a href="">Product Card 7</a></li>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
                     <li class="dropdown6"><a href="javacrip:void()" onclick="toggleDropdown6()">Docs <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
@@ -983,6 +1019,16 @@
             $('.submenu4').slideUp();
         });
     });
+    $(document).ready(function() {
+        $('.menu1 li').click(function(e) {
+            e.stopPropagation();
+            $(this).children('.submenu5').slideToggle();
+        });
+
+        $(document).click(function() {
+            $('.submenu5').slideUp();
+        });
+    });
 
 
 
@@ -1039,11 +1085,23 @@
         }
     }
 
+    function toggleDropdown5() {
+        var dropdown = document.querySelector('.dropdown5');
+        dropdown.classList.toggle('show');
+        if (dropdown.classList.contains('show')) {
+            document.addEventListener('click', closeDropdown);
+        } else {
+            dropdown.classList.remove('show');
+            document.removeEventListener('click', closeDropdown);
+        }
+    }
+
     function closeDropdown(event) {
         var dropdown = document.querySelector('.dropdown');
         var dropdown1 = document.querySelector('.dropdown1');
         var dropdown2 = document.querySelector('.dropdown2');
         var dropdown4 = document.querySelector('.dropdown4');
+        var dropdown5 = document.querySelector('.dropdown5');
         var target = event.target;
 
         if (!dropdown.contains(target)) {
@@ -1060,6 +1118,10 @@
         }
         if (!dropdown4.contains(target)) {
             dropdown4.classList.remove('show');
+            document.removeEventListener('click', closeDropdown);
+        }
+        if (!dropdown5.contains(target)) {
+            dropdown5.classList.remove('show');
             document.removeEventListener('click', closeDropdown);
         }
 

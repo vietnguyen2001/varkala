@@ -108,14 +108,18 @@ span {
 
 .dropdown1.show>a,
 .dropdown2.show>a,
-.dropdown4.show>a> {
+.dropdown4.show>a,
+.dropdown5.show>a,
+.dropdown6.show>a {
     color: black;
 }
 
 .dropdown.show>a>.fa,
 .dropdown1.show>a>.fa,
 .dropdown2.show>a>.fa,
-.dropdown4.show>a>.fa {
+.dropdown4.show>a>.fa,
+.dropdown5.show>a>.fa,
+.dropdown6.show>a>.fa {
     transform: rotate(180deg);
 }
 
@@ -174,6 +178,19 @@ span {
 }
 
 .menu1>ul>li .submenu4 {
+    margin-top: 30px;
+    display: none;
+    position: absolute;
+    background: white;
+    font-size: 15px;
+    width: 760px;
+    height: auto;
+    /* padding: 5px 0; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* text-align: center; */
+}
+
+.menu1>ul>li .submenu5 {
     margin-top: 30px;
     display: none;
     position: absolute;
