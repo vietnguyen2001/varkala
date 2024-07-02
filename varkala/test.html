@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .submenu {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="menu">
+        <li onclick="toggleSubmenu(1)">Item 1</li>
+        <li onclick="toggleSubmenu(2)">Item 2</li>
+        <li onclick="toggleSubmenu(3)">Item 3</li>
+    </ul>
+
+    <div class="submenu" id="submenu1">Submenu 1</div>
+    <div class="submenu" id="submenu2">Submenu 2</div>
+    <div class="submenu" id="submenu3">Submenu 3</div>
+
+    <script>
+        function toggleSubmenu(index) {
+            var submenus = document.getElementsByClassName('submenu');
+            Array.from(submenus).forEach(function(submenu) {
+                submenu.style.display = 'none';
+            });
+            document.getElementById('submenu' + index).style.display = 'block';
+        }
+        // const submenu = document.getElementById('submenu');
+
+        // submenu.addEventListener('click', function() {
+        //     // Ẩn tất cả các submenu khác
+        //     const submenus = document.getElementsByClassName('submenu');
+        //     for (let i = 0; i < submenus.length; i++) {
+        //         if (submenus[i].id !== 'submenu') {
+        //             submenus[i].classList.remove('active');
+        //         }
+        //     }
+        // });
+    </script>
+</body>
+
+</html>
