@@ -196,11 +196,11 @@ span {
     position: absolute;
     background: white;
     font-size: 15px;
-    width: 760px;
+    margin-left: -50%;
+    /* width: 760px; */
     height: auto;
     /* padding: 5px 0; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    /* text-align: center; */
 }
 
 .submenu3>.submenu3_1 {
@@ -225,8 +225,7 @@ span {
     font-weight: 500;
 }
 
-.submenu1 .new,
-.submenu2 .new {
+.new {
     font-size: 11px;
     padding: 3px 5px;
     border-radius: 2px;
@@ -373,6 +372,22 @@ span {
 
 
 /* start pages */
+
+.dropdown5>ul>.submenu5_1 {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin-left: -30%;
+}
+
+.submenu5_1 li {
+    width: 100%;
+}
+
+.dropdown5>ul>.submenu5_1 img {
+    width: 288px;
+    height: auto;
+}
 
 
 /* end pages */
